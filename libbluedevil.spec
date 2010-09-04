@@ -1,10 +1,8 @@
 
-# TODO: needs cleaning BRs and Rs.
-
 %define		qtver	4.6.3
 
 Summary:	Qt-based library to handle all Bluetooth functionality
-Summary(pl.UTF-8):	Biblioteka bazuj±ca na Qt obs³uguj±ca funkcjonalno¶æ Bluetooth
+Summary(pl.UTF-8):	Biblioteka bazujÂ±ca na Qt obsÅ‚ugujÄ…ca funkcjonalnoÅ›Ä‡ Bluetooth
 Name:		libbluedevil
 Version:	1.7
 Release:	0.1
@@ -14,20 +12,12 @@ Group:		X11/Libraries
 Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	fc89a1a6de7801417a837073b9fb306d
 URL:		http://projects.ufocoders.com/projects/libbluedevil
-BuildRequires:	QtCore-devel >= %{qtver}
 BuildRequires:	QtDBus-devel >= %{qtver}
 BuildRequires:	QtGui-devel >= %{qtver}
-BuildRequires:	QtNetwork-devel >= %{qtver}
-BuildRequires:	QtSvg-devel >= %{qtver}
 BuildRequires:	automoc4 >= 0.9.88
 BuildRequires:	cmake >= 2.8.0
-BuildRequires:	gettext-devel
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
-BuildRequires:	shared-desktop-ontologies-devel >= 0.2
-BuildRequires:	soprano-devel >= 2.4.0.1
-Requires:	bluez
-Requires:	obex-data-server
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
