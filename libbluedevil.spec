@@ -1,11 +1,11 @@
 
-%define		qtver	4.7.0
+%define		qtver	4.7.1
 
 Summary:	Qt-based library to handle all Bluetooth functionality
 Summary(pl.UTF-8):	Biblioteka bazuj±ca na Qt obsługująca funkcjonalność Bluetooth
 Name:		libbluedevil
 Version:	1.8
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://media.ereslibre.es/2010/11/%{name}-v%{version}-1.tar.bz2
@@ -18,6 +18,7 @@ BuildRequires:	cmake >= 2.8.0
 BuildRequires:	dbus-devel
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
+BuildRequires:	rpmbuild(macros) >= 1.600
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -40,12 +41,6 @@ libbluedevil.
 install -d build
 cd build
 %cmake \
-	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-	-DSYSCONF_INSTALL_DIR=%{_sysconfdir} \
-	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
-%if "%{_lib}" == "lib64"
-	-DLIB_SUFFIX=64 \
-%endif
 	../
 
 %{__make}
