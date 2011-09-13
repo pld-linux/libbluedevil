@@ -1,5 +1,6 @@
 
 %define		qtver	4.7.1
+%define		state	unstable
 
 Summary:	Qt-based library to handle all Bluetooth functionality
 Summary(pl.UTF-8):	Biblioteka bazuj±ca na Qt obsługująca funkcjonalność Bluetooth
@@ -8,7 +9,7 @@ Version:	1.9
 Release:	1
 License:	GPL
 Group:		X11/Libraries
-Source0:	ftp://ftp.kde.org/pub/kde/unstable/libbluedevil/1.9/src/%{name}-%{version}.tar.bz2
+Source0:	ftp://ftp.kde.org/pub/kde/%{state}/libbluedevil/%{version}/src/%{name}-%{version}.tar.bz2
 # Source0-md5:	5f22614dfb840734da6e8b8710c2472e
 URL:		http://projects.ufocoders.com/projects/libbluedevil
 BuildRequires:	QtDBus-devel >= %{qtver}
