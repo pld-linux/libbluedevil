@@ -10,7 +10,7 @@ Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/%{state}/libbluedevil/%{version}/src/%{name}-%{version}.tar.xz
-# Source0-md5:	a13c60e61ad3ecbbd25eea47790f92b6
+# Source0-md5:	25d114ba52218f4cf44c7b4525399835
 URL:		http://projects.ufocoders.com/projects/libbluedevil
 BuildRequires:	QtDBus-devel >= %{qtver}
 BuildRequires:	QtGui-devel >= %{qtver}
@@ -36,7 +36,7 @@ This package contains header files and development documentation for
 libbluedevil.
 
 %prep
-%setup -q 
+%setup -q -n %{name}-v%{version} 
 
 %build
 install -d build
