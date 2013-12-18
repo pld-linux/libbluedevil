@@ -2,15 +2,20 @@
 %define		qtver	4.7.4
 %define		state	stable
 
+# git archive --format=tar --remote=git://anongit.kde.org/libbluedevil bluez5  \
+# --prefix=libbluedevil-%{version}/ | bzip2 >libbluedevil-%{version}-%{snap}.tar.bz2
+%define		snap	20131218
+
 Summary:	Qt-based library to handle all Bluetooth functionality
 Summary(pl.UTF-8):	Biblioteka bazuj±ca na Qt obsługująca funkcjonalność Bluetooth
 Name:		libbluedevil
-Version:	1.9.4
-Release:	1
+Version:	2.0
+Release:	0.%{snap}.1
 License:	GPL
 Group:		X11/Libraries
-Source0:	ftp://ftp.kde.org/pub/kde/%{state}/libbluedevil/%{version}/src/%{name}-%{version}.tar.xz
-# Source0-md5:	25d114ba52218f4cf44c7b4525399835
+#Source0:	ftp://ftp.kde.org/pub/kde/%{state}/libbluedevil/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	libbluedevil-%{version}-%{snap}.tar.bz2
+# Source0-md5:	a3f5cee2735071be1d76dd6c47db7ee0
 URL:		http://projects.ufocoders.com/projects/libbluedevil
 BuildRequires:	QtDBus-devel >= %{qtver}
 BuildRequires:	QtGui-devel >= %{qtver}
@@ -36,7 +41,7 @@ This package contains header files and development documentation for
 libbluedevil.
 
 %prep
-%setup -q -n %{name}-v%{version} 
+%setup -q
 
 %build
 install -d build
