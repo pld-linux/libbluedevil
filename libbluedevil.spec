@@ -7,7 +7,7 @@
 %define		snap	20131218
 
 Summary:	Qt-based library to handle all Bluetooth functionality
-Summary(pl.UTF-8):	Biblioteka bazuj±ca na Qt obsługująca funkcjonalność Bluetooth
+Summary(pl.UTF-8):	Biblioteka bazująca na Qt obsługująca funkcjonalność Bluetooth
 Name:		libbluedevil
 Version:	2.0
 Release:	0.%{snap}.1
